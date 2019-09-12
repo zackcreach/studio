@@ -1,0 +1,23 @@
+{
+  "name": "genart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "dev": "npm run docs && canvas-sketch index.js --open --hot --output=output",
+    "docs": "open https://simon.html5.org/dump/html5-canvas-cheat-sheet.html",
+    "build": "canvas-sketch index.js --build --dir public/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-sketch": "^0.6.1",
+    "canvas-sketch-util": "^1.8.0",
+    "nice-color-palettes": "^3.0.0"
+  },
+  "prettier": {},
+  "devDependencies": {
+    "canvas-sketch-cli": "^1.11.1"
+  }
+}
