@@ -35,16 +35,16 @@ const sketch = ({ context }) => {
   // Setup your scene
   const scene = new THREE.Scene();
 
-  for (let index = -500; index < 500; index++) {
-    const material = new THREE.LineBasicMaterial({
-      color: `hsl(${index * 10}, 100%, 100%)`
-    });
-    const geometry = new THREE.Geometry();
-    geometry.vertices.push(new THREE.Vector3(-10000, 0, index * 3));
-    geometry.vertices.push(new THREE.Vector3(10000, 0, index * 3));
-    const line = new THREE.Line(geometry, material);
-    scene.add(line);
-  }
+  const geometry = new THREE.SphereGeometry(20, 50, 32);
+  var lineSegments = new THREE.Line(
+    geometry,
+    new THREE.LineBasicMaterial({
+      color: 0xffffff,
+      linecap: "square",
+      linejoin: "miter"
+    })
+  );
+  scene.add(lineSegments);
 
   // Specify an ambient/unlit colour
   scene.add(new THREE.AmbientLight("#59314f"));
